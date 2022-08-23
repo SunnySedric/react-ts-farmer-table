@@ -1,7 +1,8 @@
 import * as React from 'react';
+import { Data, FarmerItem } from './types';
 
 const FarmerListTable = ({ data, formData, toggleNameSort, nameSort }) => {
-  data = data.sort((a, b) => {
+  data = data.sort((a: FarmerItem, b: FarmerItem) => {
     if (a.farmer_name > b.farmer_name) return nameSort;
     if (a.farmer_name < b.farmer_name) return nameSort * -1;
     return 0;
@@ -11,7 +12,7 @@ const FarmerListTable = ({ data, formData, toggleNameSort, nameSort }) => {
   }
   if (formData.keyword) {
     data = data.filter(
-      (item) =>
+      (item: FarmerItem) =>
         item.city.toLowerCase().startsWith(formData.keyword.toLowerCase()) ||
         item.farmer_name
           .toLowerCase()

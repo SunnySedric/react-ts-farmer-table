@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from 'react';
 
 const FarmerListTable = ({ formData, setFormData, states }) => {
   return (
@@ -9,11 +9,11 @@ const FarmerListTable = ({ formData, setFormData, states }) => {
             <div className="control">
               <div className="select is-fullwidth">
                 <select
-                  value={formData.state || "1"}
+                  value={formData.state || '1'}
                   name="state"
                   onChange={setFormData}
                 >
-                  <option value={""}>State (All)</option>
+                  <option value={''}>State (All)</option>
                   {states.map((state, id) => (
                     <option key={id} value={state}>
                       {state}
