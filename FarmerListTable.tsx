@@ -27,7 +27,7 @@ const FarmerListTable = ({ data, formData, toggleNameSort, nameSort }) => {
   }
 
   return (
-    <table className="table is-fullwidth">
+    <table className="table is-fullwidth is-bordered">
       <thead>
         <tr>
           <th onClick={toggleNameSort}>
